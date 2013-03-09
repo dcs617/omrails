@@ -1,6 +1,9 @@
 Omrails::Application.routes.draw do
-
+  get "products" => "static_pages#products"
   get "about" => "static_pages#about"
+  get "contact" => "static_pages#contact"
+  get "login" => "static_pages#login"
+  get "register" => "static_pages#register"
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.

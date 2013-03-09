@@ -1,0 +1,23 @@
+/* This changes the default font for the entire site */
+/* $baseFontFamily: 'Princess Sofia', cursive;
+@import url(http://fonts.googleapis.com/css?family=Princess+Sofia); */
+
+$btnPrimaryBackground: green;
+$navbarBackgroundHighlight: black;
+$navbarBackground: gray;
+
+@import 'bootstrap';
+
+body 	{
+		padding-top:60px
+		}
+
+@import 'bootstrap-responsive';
+
+.footer {
+		margin-top:60px;
+		color:$grayLight;
+		a 	{
+			color:$gray;	
+			}
+		}

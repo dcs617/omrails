@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'sass-rails', '~> 3.2.3'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.0.3.1'
 gem 'jquery-rails'
 
 group :production do
