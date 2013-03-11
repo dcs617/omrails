@@ -1,3 +1,4 @@
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container"> 
@@ -15,13 +16,37 @@
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
           <ul class="nav">
-            <li><%= link_to "Products", products_path %></li>
+<ul class="nav">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      Products
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><%= link_to "Shoes", products_path %></li>
+      <li><%= link_to "Tops", products_path %></li>
+      <li><%= link_to "Bottoms", products_path %></li>
+      <li><%= link_to "Accesseries", products_path %></li>
+    </ul>
+  </li>
+</ul>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact", contact_path %></li>
           </ul>
           <ul class="nav pull-right">
-            <li><%= link_to "Login", login_path %></li>
-            <li><%= link_to "Register", register_path %></li>
+            <form class="navbar-search">
+              <input type="text" class="search-query" placeholder="Search">
+            </form>
+            <% if user_signed_in? %>
+              <li class= "navbar-search"></li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+              <li><%= link_to "My Account", edit_user_registration_path %></li>
+            <% else %>
+              <li><%= link_to "Login", new_user_session_path %></li>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+            <% end %>
+          </ul>
+          <ul class="nav pull-right">
           </ul>
         <!-- .nav, .navbar-search, .navbar-form, etc -->
       </div>
